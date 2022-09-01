@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoggoAdoption.DogInfoDetailsPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Image Source="pin.png" HeightRequest="20" WidthRequest="20" Margin="0,10,0,0"></Image>
+                <Label x:Name="DogInfolocation" FontSize="Medium" TextColor="Black" FontAttributes="Bold" Margin="-5, 10, 10,0"/>
+            </StackLayout>
+
+            <Frame HeightRequest="250" WidthRequest="240" BackgroundColor="White" HasShadow="True" Margin="10" Padding="5">
+                <Image x:Name="ImgSource" HeightRequest="350" WidthRequest="350" Aspect="AspectFill"></Image>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <Label x:Name="DogInfoName" HorizontalTextAlignment="Start" FontSize="25" TextColor="Black" FontAttributes="Bold"/>
+                <Image Source="redheart.png" HorizontalOptions="EndAndExpand" HeightRequest="40" WidthRequest="40" Margin="2" Aspect="AspectFit"></Image>
+            </StackLayout>
+            <Label x:Name="DogDescription" HorizontalOptions="Center" FontSize="Small" TextColor="Black" FontAttributes="Italic" Margin="10"></Label>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label Text="Type:" FontSize="Small" TextColor="Black"></Label>
+                <Label x:Name="DogInfoType" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label Text="Sex:" FontSize="Small" TextColor="Black"></Label>
+                <Label x:Name="DogInfoSex" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label Text="Color:" FontSize="Small" TextColor="Black"></Label>
+                <Label x:Name="DogInfoColor" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Adopt" Clicked="Button_Clicked" HorizontalOptions="Center" BackgroundColor="#2196F3" CornerRadius="25" WidthRequest="100" HeightRequest="50"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

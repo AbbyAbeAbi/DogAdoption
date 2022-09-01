@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DoggoAdoption"
+             x:Class="DoggoAdoption.DogListViewPage">
+   <!-- <ContentPage.BindingContext>
+        <local:DogInfoViewModel/>
+    </ContentPage.BindingContext> -->
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#fff">
+            <StackLayout>
+                <Label Text="Doggo Adoption List" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center" Margin="10"></Label>
+            </StackLayout>
+            <!-- Display dogs'info in a list -->
+            <CollectionView x:Name="collectionView"
+                            EmptyView="No items to display">
+                <!--ItemTapped="OnItemSelected"> -->
+                <!-- Define the appearance of each item in the list -->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10" >
+                                <Frame CornerRadius="5">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label VerticalOptions="Center" Text="{Binding DogId}" x:Name="ImageSource" TextColor="Black"></Label>
+                                        <Image Source="{Binding ImageUrl}" HeightRequest="100" WidthRequest="100"></Image>
+                                        <StackLayout>
+                                            <Label VerticalOptions="Center" Text="{Binding DogName}" x:Name="DogNameLabel" TextColor="Black" FontSize="Large"></Label>
+                                            <Label VerticalOptions="Center" Text="{Binding Location}" x:Name="DogLocationLabel" TextColor="Black" FontSize="Small"></Label>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                            <Image Source="edit.png"
+                                                   WidthRequest="35"
+                                                   HeightRequest="35">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                                          CommandParameter="{Binding DogId}"/>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Image Source="delete.png"
+                                                   WidthRequest="30"
+                                                   HeightRequest="30">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"
+                                                                          CommandParameter="{Binding DogId}"/>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <StackLayout>
+                <ImageButton Source="add.png"
+                             WidthRequest="50"
+                             HeightRequest="50"
+                             BackgroundColor="#fff"
+                             Clicked="ImageButton_Clicked"></ImageButton>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

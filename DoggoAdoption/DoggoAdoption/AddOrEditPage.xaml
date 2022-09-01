@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DoggoAdoption"
+             x:Class="DoggoAdoption.AddOrEditPage">
+
+    <!--<ContentPage.BindingContext>
+        <local:AddOrEditViewModel/>
+    </ContentPage.BindingContext> -->
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Button Text="Upload Image"></Button>
+                <Image x:Name="imgFile" WidthRequest="200" HeightRequest="200"></Image>
+                <Label x:Name="fileName" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <Entry x:Name="dogName" Placeholder="Dog's name" ></Entry>
+            <Entry x:Name="dogType" Placeholder="Dog's Type" ></Entry>
+            <Entry x:Name="dogSex" Placeholder="Dog's Sex" ></Entry>
+            <Entry x:Name="dogLocation" Placeholder="Dog's Location" ></Entry>
+            <Entry x:Name="dogDescription" Placeholder="Dog's Description" ></Entry>
+            <Button Text="Save" Clicked="BtnSave"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
